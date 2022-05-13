@@ -1,0 +1,73 @@
+{
+    "tiers": [
+        {
+            "name": ["BASIC-HDD", "STANDARD", 1, 3],
+            "max_capacity_gb": 65433,
+            "performance": {
+                "scale_type": "FIXED",
+                "scaling": [
+                    {
+                        "limit_gb": 10240,
+                        "read_iops": 600,
+                        "write_ips": 1000,
+                        "read_tp_mbps": 100,
+                        "write_tp_mbps": 100
+                    },
+                    {
+                        "limit_gb": 65433,
+                        "read_iops": 1000,
+                        "write_ips": 5000,
+                        "read_tp_mbps": 180,
+                        "write_tp_mbps": 120
+                    }
+                ]
+            }
+        },
+        {
+            "name": ["BASIC-SDD", "PREMIUM", 2, 4],
+            "max_capacity_gb": 65433,
+            "performance": {
+                "scale_type": "FIXED",
+                "scaling": [
+                    {
+                        "limit_gb": 65433,
+                        "read_iops": 60000,
+                        "write_ips": 25000,
+                        "read_tp_mbps": 1200,
+                        "write_tp_mbps": 350
+                    }
+                ]
+            }
+        },
+        {
+            "name": ["ENTERPRISE", 6],
+            "max_capacity_gb": 10240,
+            "allow_resize": true,
+            "performance": {
+                "scale_type": "LINEAR",
+                "step_gb": 1024,
+                "min_performance_gb": 1024,
+                "scaling": {
+                    "read_iops": 12000,
+                    "write_iops": 4000,
+                    "read_tp_mbps": 120,
+                    "write_tp_mbps": 100
+                }
+            }
+        },
+        {
+            "name": ["HIGH_SCALE_SSD", 5],
+            "max_capacity_gb": 102400,
+            "performance": {
+                "scale_type": "LINEAR",
+                "step_gb": 2560,
+                "scaling": {
+                    "read_iops": 23000,
+                    "write_iops": 6500,
+                    "read_tp_mbps": 650,
+                    "write_tp_mbps": 220
+                }
+            }
+        }
+    ]
+}

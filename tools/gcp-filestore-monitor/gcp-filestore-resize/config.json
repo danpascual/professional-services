@@ -1,0 +1,22 @@
+{
+    "tiers": [
+        {
+            "name": ["BASIC-HDD", "STANDARD", "BASIC-SDD", "PREMIUM", 1, 2, 3, 4],
+            "min_capacity_gb": 1,
+            "max_capacity_gb": 65433,
+            "increments_gb": 1
+        },
+        {
+            "name": ["ENTERPRISE", 6],
+            "min_capacity_gb": 1024,
+            "max_capacity_gb": 10240,
+            "increments_gb": 256
+        },
+        {
+            "name": ["HIGH_SCALE_SSD", 5],
+            "min_capacity_gb": 10240,
+            "max_capacity_gb": 102400,
+            "increments_gb": 2560
+        }
+    ]
+}
